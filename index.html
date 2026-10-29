@@ -80,35 +80,32 @@
 }
 
 .brand-card {
-  min-width: 0;
   min-height: 150px;
   padding: 22px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid var(--line);
-  color: var(--ink);
+  box-sizing: border-box;
+  border: 1px solid rgba(32, 37, 31, 0.18);
+  color: #20251f;
   text-decoration: none;
-  transition: transform 220ms ease, box-shadow 220ms ease,
-              border-color 220ms ease;
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
 .brand-card h3 {
   margin: 0;
-  font-family: var(--serif);
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 2rem;
   font-weight: 500;
-  letter-spacing: -0.06em;
 }
 
 .brand-card p {
   margin: 20px 0 0;
+  color: #686d63;
   font-size: 0.77rem;
-  color: var(--muted);
 }
 
-.brand-card.firo { background: var(--white); }
+.brand-card.firo { background: #fffdf7; }
 .brand-card.allura { background: #e4e6d9; }
 .brand-card.euforia { background: #e8e0d2; }
 .brand-card.joviva { background: #dfe8df; }
@@ -116,38 +113,11 @@
 .brand-card:hover {
   transform: translateY(-7px);
   box-shadow: 0 12px 24px rgba(32, 37, 31, 0.12);
-  border-color: rgba(32, 37, 31, 0.35);
-}
-
-.brand-card:focus-visible {
-  outline: 3px solid var(--green);
-  outline-offset: 4px;
 }
 
 @media (max-width: 800px) {
   .brand-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 400px) {
-  .brand-card {
-    padding: 16px;
-    min-height: 125px;
-  }
-
-  .brand-card h3 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .brand-card {
-    transition: none;
-  }
-
-  .brand-card:hover {
-    transform: none;
   }
 }
 
